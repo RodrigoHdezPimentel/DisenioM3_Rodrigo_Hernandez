@@ -2,11 +2,20 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fondo"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingLeft="40dp"
-    android:paddingRight="40dp"
     tools:context=".Login">
+
+    <ImageView
+        android:id="@+id/background"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/gradient" />
 
     <ImageView
         android:id="@+id/logoLogin"
@@ -41,11 +50,14 @@
         app:startIconDrawable="@drawable/ic_persona">
 
         <EditText
+            style="@style/MaterialAlertDialog.Material3.Title.Text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Username"
-            style="@style/MaterialAlertDialog.Material3.Title.Text"
-            android:inputType="textPersonName" />
+            android:inputType="textPersonName"
+            app:layout_constraintStart_toStartOf="@+id/PaddingLeft"
+            app:layout_constraintEnd_toStartOf="@+id/PaddingRight"
+            />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -61,11 +73,13 @@
         app:startIconDrawable="@drawable/ic_llave">
 
         <EditText
+            style="@style/MaterialAlertDialog.Material3.Title.Text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Password"
-            style="@style/MaterialAlertDialog.Material3.Title.Text"
-            android:inputType="textPassword" />
+            android:inputType="textPassword"
+            app:layout_constraintEnd_toStartOf="@+id/PaddingRight"
+            app:layout_constraintStart_toStartOf="@+id/PaddingLeft" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -75,12 +89,12 @@
         android:layout_height="wrap_content"
         android:text="Recuerdame"
         android:textSize="16dp"
-        app:layout_constraintEnd_toStartOf="@+id/guideline"
-        app:layout_constraintStart_toStartOf="@+id/passwordInputLogin"
+        app:layout_constraintEnd_toStartOf="@+id/center"
+        app:layout_constraintStart_toStartOf="@+id/PaddingLeft"
         app:layout_constraintTop_toBottomOf="@+id/passwordInputLogin" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline"
+        android:id="@+id/center"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -91,10 +105,10 @@
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:gravity="center_vertical|left"
-        android:text="Hola"
+        android:text="Olvidé mi contarseña"
         android:textSize="16dp"
         app:layout_constraintBottom_toBottomOf="@+id/checkBox"
-        app:layout_constraintEnd_toEndOf="@+id/passwordInputLogin"
+        app:layout_constraintEnd_toStartOf="@+id/PaddingRight"
         app:layout_constraintTop_toBottomOf="@+id/passwordInputLogin" />
 
     <Button
@@ -103,8 +117,8 @@
         android:layout_height="wrap_content"
         android:text="Iniciar sesion"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/guideline"
-        app:layout_constraintStart_toStartOf="@+id/passwordInputLogin"
+        app:layout_constraintEnd_toStartOf="@+id/center"
+        app:layout_constraintStart_toStartOf="@+id/PaddingLeft"
         app:layout_constraintTop_toBottomOf="@+id/usernameInputLogin" />
 
     <Button
@@ -113,8 +127,22 @@
         android:layout_height="wrap_content"
         android:text="Registrarse"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/usernameInputLogin"
-        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintEnd_toStartOf="@+id/PaddingRight"
+        app:layout_constraintStart_toStartOf="@+id/center"
         app:layout_constraintTop_toBottomOf="@+id/usernameInputLogin" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/PaddingLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/PaddingRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.9" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
