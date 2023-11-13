@@ -1,7 +1,5 @@
 package com.mcas2.firstdesign;
 
-import static android.app.PendingIntent.getActivity;
-
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.AlertDialog;
@@ -63,7 +61,7 @@ public class Login extends AppCompatActivity {
         ImageView img = findViewById(R.id.background);
         img.setAlpha(0.1f);
         Glide.with(this)
-                .load("https://images.unsplash.com/photo-1533240332313-0db49b459ad6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80")
+                .load("https://images.unsplash.com/photo-1544653221-81df644ed75f?q=80&w=1854&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
                 .centerCrop()
                 .into(img);
 
