@@ -1,9 +1,8 @@
-package com.mcas2.firstdesign;
+package com.rodrigo.design_m3;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
