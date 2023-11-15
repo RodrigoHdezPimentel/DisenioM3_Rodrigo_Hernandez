@@ -38,15 +38,16 @@ public class Login extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 AlertDialog.Builder builder = new AlertDialog.Builder(Login.this);
-                builder.setMessage("Si has olvidado tu contraseña, te jodes, lo siento")
+                builder.setMessage("Siempre te quedará hacerte otra cuenta")
                         .setCancelable(false)
                         .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int id) {
-                                Toast.makeText(Login.this, "No te preocupes, siempre puedes suicidarte", Toast.LENGTH_LONG).show();
                             }
                         })
-                        .setNegativeButton("CTM", new DialogInterface.OnClickListener() {
+                        .setNegativeButton("Gracias por nada", new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int id) {
+                                Toast.makeText(Login.this, "De nada", Toast.LENGTH_LONG).show();
+
                                 ImageView huella = findViewById(R.id.logoLogin);
                                 Animation DenyAnim = AnimationUtils.loadAnimation(Login.this, R.anim.deny);
                                 huella.startAnimation(DenyAnim);
