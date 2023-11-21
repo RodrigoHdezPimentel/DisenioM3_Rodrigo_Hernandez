@@ -5,8 +5,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
+import android.text.Layout;
 import android.text.SpannableString;
 import android.text.style.UnderlineSpan;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -14,6 +16,7 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -34,30 +37,21 @@ public class Login extends AppCompatActivity {
         SpannableString ForgotPassword = new SpannableString("Olvidé mi contraseña");
         ForgotPassword.setSpan(new UnderlineSpan(), 0, ForgotPassword.length(), 0);
         olvideContrasena.setText(ForgotPassword);
-        olvideContrasena.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                AlertDialog.Builder builder = new AlertDialog.Builder(Login.this);
-                builder.setMessage("Siempre te quedará hacerte otra cuenta")
-                        .setCancelable(false)
-                        .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog, int id) {
-                            }
-                        })
-                        .setNegativeButton("Gracias por nada", new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog, int id) {
-                                Toast.makeText(Login.this, "De nada", Toast.LENGTH_LONG).show();
+        olvideContrasena.setOnClickListener(view -> {
+            View alertDialog = LayoutInflater.from(this).inflate(R.layout.dialog_forgot_password, null, false);
 
-                                ImageView huella = findViewById(R.id.logoLogin);
-                                Animation DenyAnim = AnimationUtils.loadAnimation(Login.this, R.anim.deny);
-                                huella.startAnimation(DenyAnim);
-                                dialog.cancel();
-                            }
-                        });
-                builder.create();
-                builder.show();
-            }
-        });
+            new AlertDialog.Builder(this)
+                        .setTitle("¿Olvidaste tu contarseña?")
+                        .setMessage("Aqui puedes recuperarla")
+                        .setView(alertDialog)
+                        .setPositiveButton("Aceptar", null)
+                        .setNegativeButton("Cancelar",null)
+                        .setIcon(R.drawable.huella)
+                        .create()
+                        .show();
+
+            });
+
 
         ImageView img = findViewById(R.id.background);
         img.setAlpha(0.1f);

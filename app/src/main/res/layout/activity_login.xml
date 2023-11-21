@@ -151,7 +151,7 @@
         android:id="@+id/copyRight"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hikers by Rodrigo Hernández"
+        android:text="CampFire by Rodrigo Hernández"
         android:textSize="14dp"
         app:layout_constraintBottom_toBottomOf="@+id/background"
         app:layout_constraintEnd_toEndOf="parent"
