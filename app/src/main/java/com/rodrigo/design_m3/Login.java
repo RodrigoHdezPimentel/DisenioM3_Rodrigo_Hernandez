@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.SpannableString;
 import android.text.style.UnderlineSpan;
@@ -103,5 +104,14 @@ public class Login extends AppCompatActivity {
         });
         TextView copy = findViewById(R.id.copyRight);
         copy.setText("Hikers by Rodrigo Hernández\n");
+        Button toMain = findViewById(R.id.toMain);
+        toMain.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent toMain = new Intent(Login.this, main.class);
+                startActivity(toMain);
+            }
+        });
     }
+
 }

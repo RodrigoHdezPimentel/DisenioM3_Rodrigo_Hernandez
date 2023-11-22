@@ -2,10 +2,9 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/fondo"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Login">
+    tools:context=".register">
 
     <ImageView
         android:id="@+id/background"
@@ -21,9 +20,10 @@
         android:id="@+id/logoLogin"
         android:layout_width="wrap_content"
         android:layout_height="150dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="20dp"
         android:src="@drawable/campfire"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -31,9 +31,9 @@
         android:id="@+id/appNameLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="10dp"
         android:fontFamily="@font/classicaldiary"
-        android:text="@string/app_name"
+        android:text="Registrate"
         android:textColor="@color/md_theme_light_surfaceTint"
         android:textSize="40sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -82,18 +82,7 @@
             android:inputType="textPassword"
             app:layout_constraintEnd_toStartOf="@+id/PaddingRight"
             app:layout_constraintStart_toStartOf="@+id/PaddingLeft" />
-
     </com.google.android.material.textfield.TextInputLayout>
-
-    <CheckBox
-        android:id="@+id/recuerdame"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="Recuerdame"
-        android:textSize="16dp"
-        app:layout_constraintEnd_toStartOf="@+id/center"
-        app:layout_constraintStart_toStartOf="@+id/PaddingLeft"
-        app:layout_constraintTop_toBottomOf="@+id/passwordInputLogin" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/center"
@@ -102,22 +91,11 @@
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.5" />
 
-    <TextView
-        android:id="@+id/olvideContrasena"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:gravity="center_vertical|left"
-        android:text="Olvidé mi contarseña"
-        android:textSize="16dp"
-        app:layout_constraintBottom_toBottomOf="@+id/recuerdame"
-        app:layout_constraintEnd_toStartOf="@+id/PaddingRight"
-        app:layout_constraintTop_toBottomOf="@+id/passwordInputLogin" />
-
     <Button
         android:id="@+id/login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Iniciar sesion"
+        android:text="Back"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/center"
         app:layout_constraintStart_toStartOf="@+id/PaddingLeft"
@@ -151,20 +129,20 @@
         android:id="@+id/copyRight"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hikers by Rodrigo Hernández"
+        android:text="CampFire by Rodrigo Hernández"
         android:textSize="14dp"
         app:layout_constraintBottom_toBottomOf="@+id/background"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <Button
-        android:id="@+id/toMain"
-        android:layout_width="wrap_content"
+    <EditText
+        android:id="@+id/editTextTextPassword"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Button"
-        app:layout_constraintBottom_toTopOf="@+id/copyRight"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/login" />
-
+        android:ems="10"
+        android:hint="Confirma Contrasela"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toStartOf="@+id/PaddingRight"
+        app:layout_constraintStart_toStartOf="@+id/PaddingLeft"
+        app:layout_constraintTop_toBottomOf="@+id/passwordInputLogin" />
 </androidx.constraintlayout.widget.ConstraintLayout>
