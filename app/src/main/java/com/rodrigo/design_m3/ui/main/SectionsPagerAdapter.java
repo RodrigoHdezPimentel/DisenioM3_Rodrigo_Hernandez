@@ -1,4 +1,4 @@
-package com.mcas2.firstdesign.ui.main;
+package com.rodrigo.design_m3.ui.main;
 
 import android.content.Context;
 
@@ -8,9 +8,9 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
-import com.mcas2.firstdesign.R;
-import com.mcas2.firstdesign.Rutas.Rutas_favoritas;
-import com.mcas2.firstdesign.Rutas.Rutas_populares;
+import com.rodrigo.design_m3.R;
+import com.rodrigo.design_m3.Rutas.Rutas_favoritas;
+import com.rodrigo.design_m3.Rutas.Rutas_populares;
 
 /**
  * A [FragmentPagerAdapter] that returns a fragment corresponding to

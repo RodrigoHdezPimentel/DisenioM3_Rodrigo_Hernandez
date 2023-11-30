@@ -1,4 +1,4 @@
-package com.mcas2.firstdesign.ui.main;
+package com.rodrigo.design_m3.ui.main;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -12,8 +12,7 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
-import com.mcas2.firstdesign.R;
-import com.mcas2.firstdesign.databinding.FragmentMainBinding;
+import com.rodrigo.design_m3.databinding.FragmentMainBinding;
 
 /**
  * A placeholder fragment containing a simple view.
@@ -22,7 +21,7 @@ public class PlaceholderFragment extends Fragment {
 
     private static final String ARG_SECTION_NUMBER = "section_number";
 
-    private PageViewModel pageViewModel;
+   PageViewModel pageViewModel;
     private FragmentMainBinding binding;
 
     public static PlaceholderFragment newInstance(int index) {

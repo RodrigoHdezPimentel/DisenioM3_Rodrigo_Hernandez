@@ -1,20 +1,18 @@
-package com.mcas2.firstdesign;
+package com.rodrigo.design_m3;
 
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.tabs.TabLayout;
+import com.rodrigo.design_m3.databinding.ActivityMainBinding;
+import com.rodrigo.design_m3.ui.main.SectionsPagerAdapter;
 
 import androidx.viewpager.widget.ViewPager;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 
-import com.mcas2.firstdesign.ui.main.SectionsPagerAdapter;
-import com.mcas2.firstdesign.databinding.ActivityMainBinding;
 
 public class main extends AppCompatActivity {
 

@@ -1,4 +1,4 @@
-    package com.mcas2.firstdesign.Rutas;
+package com.rodrigo.design_m3.Rutas;
 
 import android.os.Bundle;
 
@@ -8,9 +8,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.mcas2.firstdesign.R;
+import com.rodrigo.design_m3.R;
 
-    public class Rutas_favoritas extends Fragment {
+public class Rutas_favoritas extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

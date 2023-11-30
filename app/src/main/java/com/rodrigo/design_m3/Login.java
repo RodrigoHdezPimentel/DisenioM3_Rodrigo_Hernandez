@@ -40,6 +40,8 @@ public class Login extends AppCompatActivity {
             public void onClick(View view) {
                 AlertDialog.Builder builder = new AlertDialog.Builder(Login.this);
                 builder.setMessage("Siempre te quedará hacerte otra cuenta")
+                        .setTitle("Contraseña")
+                        .setView(R.layout.check_box_alert_dialog)
                         .setCancelable(false)
                         .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int id) {
